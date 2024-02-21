@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<th>train_number</th>
+			<th>train_name</th>
+			<th>departure_station</th>
+			<th>arrival_station</th>
+			<th>departure_time</th>
+			<th>arrival_time</th>
+			<th>seat_capacity</th>
+			<th>ticket_price</th>
+		</tr>
+		<tr th:each="trains:${display}">
+			<td th:text="${trains.train_number}"></td>
+			<td th:text="${trains.train_name}"></td>
+			<td th:text="${trains.departure_station}"></td>
+			<td th:text="${trains.arrival_station}"></td>
+			<td th:text="${trains.departure_time}"></td>
+			<td th:text="${trains.arrival_time}"></td>
+			<td th:text="${trains.seat_capacity}"></td>
+			<td th:text="${trains.ticket_price}"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
